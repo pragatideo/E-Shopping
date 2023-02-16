@@ -1,0 +1,106 @@
+<br>
+<ng-template #content let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Add Customers</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<form [formGroup]="registrationform">
+			<div class="mb-3">
+				<label for="dateOfBirth">Enter Customer Name</label>
+				<div class="input-group">
+					<input formControlName="product"
+                    type="text"
+						id="dateOfBirth"
+						class="form-control"
+						placeholder="Enter customer name"
+						name="dp"
+					/>
+				</div>
+			</div>
+			<div class="mb-3">
+				<label for="dateOfBirth">Customer Ref_No.</label>
+				<div class="input-group">
+					<input formControlName="payment"
+                    type="text"
+						id="dateOfBirth"
+						class="form-control"
+						placeholder="Customer Ref_No."
+						name="dp"
+					/>
+                    
+				</div>
+			</div>
+			<div class="mb-3">
+				<label for="dateOfBirth">Enter Address</label>
+				<div class="input-group">
+					<input
+                    formControlName="shipping"
+                    type="text"
+						id="dateOfBirth"
+						class="form-control"
+						placeholder="Address"
+						name="dp"
+						
+					/>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')" (click)="onfun()">Save</button>
+	</div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Add Customers</button>
+
+<hr />
+<!-- <pre>{{ closeResult }}</pre> -->
+<!-- {{ar|json}} -->
+
+
+<!-- <table>
+    <thead>
+      <tr class="items">
+        <th>ID</th>
+        <th>ProductName</th>
+        <th>PaymentMode</th>
+        <th>Shipppig Address</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of ar; let i = index">
+      <th>{{ i }}</th>
+        <td>{{ item.product }}</td>
+        <td>
+          <button type="button">Edit</button>
+          <button type="button" (click)="delete(i)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table> -->
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">CustomerName</th>
+        <th scope="col">Customer_Refno.</th>
+        <th scope="col">Address</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of ar; let i = index">
+        <th>{{ i +1 }}</th>
+          <td>{{ item.product }}</td>
+          <td>{{item.payment}}</td>
+          <td>{{item.shipping}}</td>
+          <td>
+            <button type="button" class="btn btn-primary"(click)="delete(i)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+  </table>

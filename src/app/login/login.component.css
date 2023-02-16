@@ -1,0 +1,27 @@
+.d{
+        margin-left: 70%;
+}
+#flex-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #flex-container > .flex-item {
+    flex: auto;
+  }
+  
+  #flex-container > .raw-item {
+    width: 5rem;
+  }
+   .cl{
+    width: 40%;
+    background-color:beige;
+    height: 90vh;
+   }
+   .fl{
+    display: flex;
+   }
+   .he{
+    text-align: center;
+    color: brown;
+   }
