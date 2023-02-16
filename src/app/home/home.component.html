@@ -18,23 +18,29 @@
   </form>
 </div>
 <router-outlet></router-outlet> -->
-<div class="m">
+
+<!-- ------------------------------------------------------------- -->
+<div class="m new">
+  <div class="card f">
 <form>
-  <div class="form-group" >
-    <label for="exampleInputEmail1">Username</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username"[(ngModel)]="email" [ngModelOptions]="{standalone: true}" >
+  <div class="form-group de" >
+    <label for="exampleInputEmail1"><b>Username</b></label>
+    <input type="text" class="form-control h" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username"[(ngModel)]="email" [ngModelOptions]="{standalone: true}" >
     <small id="emailHelp" class="form-text text-muted">We'll never share your Username and password with anyone else.</small>
   </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  <div class="form-group d">
+    <label for="exampleInputPassword1"><b>Password</b></label>
+    <input type="password" class="form-control h" id="exampleInputPassword1" placeholder="Password">
   </div>
-  <div class="form-group form-check">
+  <div class="form-group form-check d">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
-  <button type="submit" class="btn btn-primary"  (click)="onsubmit()">Submit</button>
+  <button type="submit" class="btn btn-primary d "  (click)="onsubmit()">Submit</button>
 </form>
 </div>
+</div>
 <router-outlet></router-outlet>
+
+
 
