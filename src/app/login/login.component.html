@@ -1,11 +1,10 @@
-
+<!-- 
 <div style="height: 100vh;">
-    <div class="w-100 p-3" style="background-color: #eee;height: 10vh">  
+    <div class="w-100 p-" style="background-color: #eee;height: 10vh">  
     <div id="flex-container">
         <h4 class="he">Welcome to E-Shopping</h4>
         <div class="raw-item d" id="raw"><button class="btn btn-primary" routerLink="">Logout</button></div>
         <div class="raw-item" id="raw"><b>{{mail}}</b></div>
-
       </div>
 </div>
 <div class="fl">
@@ -30,4 +29,35 @@
 
 </div>
 
+</div> -->
+
+<div style="height: 100vh;">
+    <div class="w-100 p-3" style="background-color: #eee;height: 10vh">
+    <div id="flex-container">
+        <h4 class="he">Welcome to E-Shopping</h4>
+        <div class="raw-item d" id="raw"><button class="btn btn-primary" routerLink="">Logout</button></div>
+        <div class="raw-item" id="raw"><b>{{mail}}</b></div>
+      </div>
+</div>
+<div class="fl">
+    <div class="cl col-2">
+        <div class="d-grid btncontainer">
+        <button class="btn btn-primary " routerLink="order">Orders</button>
+        
+        <button class="btn btn-primary "routerLink="products">Product</button>
+        
+        <button class="btn btn-primary "routerLink="customers">Customer</button>
+        
+        <div>
+            <img src="../../assets/logo.jpg" style="width: 80%; border-radius: 60%; margin:auto" >
+        </div>
+        
+    </div>
+</div>
+<div class="router col-10">
+    <router-outlet></router-outlet>
+</div>
+</div>
+<div>
+</div>
 </div>
