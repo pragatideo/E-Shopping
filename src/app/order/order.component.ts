@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalDismissReasons, NgbDatepickerModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { FormGroup,FormControl } from '@angular/forms';
+import { FormGroup,FormControl, Validators } from '@angular/forms';
 
 interface orders{
   product:string;
@@ -44,9 +44,9 @@ export class OrderComponent {
     // product:new FormControl(' '),
     // pay:new FormControl(''),
     // shipping:new FormControl('')
-    product:new FormControl(''),
-    payment:new FormControl(''),
-    shipping:new FormControl('')
+    product:new FormControl('',Validators.required),
+    payment:new FormControl('',Validators.required),
+    shipping:new FormControl('',Validators.required)
   });
 
   onfun(){
@@ -61,8 +61,14 @@ export class OrderComponent {
         payment:this.registrationform.controls.payment.value,
         shipping:this.registrationform.controls.shipping.value
       }
+      console.log(this.registrationform.controls.product.value)
+      if(this.registrationform.controls.product.value==null){
+        console.log("value is null")
+      }
+    if(this.registrationform.valid){
     this.ar.push(data)
     this.onsub()
+    }
     
   }
 

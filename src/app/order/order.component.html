@@ -7,7 +7,7 @@
 	<div class="modal-body">
 		<form [formGroup]="registrationform" (ngSubmit)="onsub()">
 			<div class="mb-3">
-				<label for="dateOfBirth">Enter Product</label>
+				<label for="dateOfBirth">Enter Product*</label>
 				<div class="input-group">
 					<input formControlName="product"
                     type="text"
@@ -19,7 +19,7 @@
 				</div>
 			</div>
 			<div class="mb-3">
-				<label for="dateOfBirth">Payment Method</label>
+				<label for="dateOfBirth">Payment Method*</label>
 				<div class="input-group">
 					<input formControlName="payment"
                     type="text"
@@ -32,7 +32,7 @@
 				</div>
 			</div>
 			<div class="mb-3">
-				<label for="dateOfBirth">Enter Shipping Address</label>
+				<label for="dateOfBirth">Enter Shipping Address*</label>
 				<div class="input-group">
 					<input
                     formControlName="shipping"
@@ -48,7 +48,7 @@
 		</form>
 	</div>
 	<div class="modal-footer">
-		<button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')" (click)="onfun()">Save</button>
+		<button type="button" class="btn btn-outline-dark"  (click)="onfun()" (click)="modal.close('Save click')">Save</button>
 	</div>
 </ng-template>
 
