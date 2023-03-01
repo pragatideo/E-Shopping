@@ -11,6 +11,9 @@ import { LoginComponent } from './login/login.component';
 import { OrderComponent } from './order/order.component';
 import { ProductComponent } from './product/product.component';
 import { CustomerComponent } from './customer/customer.component';
+import { Login1Component } from './login1/login1.component';
+import { Signup1Component } from './signup1/signup1.component';
+import{HttpClientModule} from'@angular/common/http'
 // import { ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
@@ -20,7 +23,9 @@ import { CustomerComponent } from './customer/customer.component';
     LoginComponent,
     OrderComponent,
     ProductComponent,
-    CustomerComponent
+    CustomerComponent,
+    Login1Component,
+    Signup1Component
   ],
   imports: [
     BrowserModule,
@@ -29,6 +34,7 @@ import { CustomerComponent } from './customer/customer.component';
     ReactiveFormsModule,
     FormsModule,
     NgbDatepickerModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
