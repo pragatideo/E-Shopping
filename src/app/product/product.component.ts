@@ -16,6 +16,7 @@ interface orders{
 export class ProductComponent {
   closeResult = '';
   ar:orders[]=[]
+  value=false;
 
 	constructor(private modalService: NgbModal) {}
 
@@ -55,6 +56,7 @@ export class ProductComponent {
     //   payment:this.registrationform.controls.payment.value,
     //   shipping:this.registrationform.controls.shipping.value
     // }
+    this.value=true
     let data:orders;
     data={
         product:this.registrationform.controls.product.value,
@@ -62,15 +64,23 @@ export class ProductComponent {
         shipping:this.registrationform.controls.shipping.value
       }
       if(this.registrationform.valid){
+        this.value=false;
     this.ar.push(data)
+    this.onsub()
       }
     
   }
 
+  onchange(){
+    this.value=false;
+  }
   delete(index: any){
     console.log(index);
     this.ar.splice(index,1);
     
+  }
+  onsub(){
+    this.registrationform.reset();
   }
 
 }

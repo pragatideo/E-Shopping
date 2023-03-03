@@ -5,7 +5,7 @@
 		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
 	</div>
 	<div class="modal-body">
-		<form [formGroup]="registrationform">
+		<form [formGroup]="registrationform" (ngSubmit)="onsub()">
 			<div class="mb-3">
 				<label for="dateOfBirth">Enter Customer Name</label>
 				<div class="input-group">
@@ -17,6 +17,7 @@
 						name="dp"
 					/>
 				</div>
+        <small id ="h1"*ngIf ="(registrationform.controls['product'].errors && registrationform.controls['product'].errors['required']) && value " style="color: red;"> CustomerName is Required</small>
 			</div>
 			<div class="mb-3">
 				<label for="dateOfBirth">Customer Ref_No.</label>
@@ -30,6 +31,7 @@
 					/>
                     
 				</div>
+        <small id ="h1"*ngIf ="(registrationform.controls['payment'].errors && registrationform.controls['payment'].errors['required']) && value " style="color: red;"> Customer_Refno is Required</small>
 			</div>
 			<div class="mb-3">
 				<label for="dateOfBirth">Enter Address</label>
@@ -44,11 +46,12 @@
 						
 					/>
 				</div>
+        <small id ="h1"*ngIf ="(registrationform.controls['shipping'].errors && registrationform.controls['shipping'].errors['required']) && value " style="color: red;"> Shipping Address is Required</small>
 			</div>
 		</form>
 	</div>
 	<div class="modal-footer">
-		<button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')" (click)="onfun()">Save</button>
+		<button type="button" class="btn btn-outline-dark"  (click)="onfun()">Save</button>
 	</div>
 </ng-template>
 
@@ -93,7 +96,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let item of ar; let i = index">
-        <th>{{ i +1 }}</th>
+        <th>{{ i+1 }}</th>
           <td>{{ item.product }}</td>
           <td>{{item.payment}}</td>
           <td>{{item.shipping}}</td>
