@@ -65,7 +65,8 @@ export class CustomerComponent {
       }
       if(this.registrationform.valid){
         this.value=false;
-        this.ar.push(data)
+        this.ar.push(data);
+        document.getElementById("ModalClose")?.click();
         this.onsub();
       }
     

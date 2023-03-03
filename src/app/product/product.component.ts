@@ -66,6 +66,7 @@ export class ProductComponent {
       if(this.registrationform.valid){
         this.value=false;
     this.ar.push(data)
+    document.getElementById("ModalClose")?.click();
     this.onsub()
       }
     
