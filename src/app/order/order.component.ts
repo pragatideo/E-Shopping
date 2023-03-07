@@ -70,8 +70,7 @@ export class OrderComponent {
     this.value=false;
     document.getElementById("ModalClose")?.click();
     this.onsub()
-    }
-    
+    } 
   }
 
   delete(index: any){
