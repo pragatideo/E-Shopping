@@ -13,7 +13,8 @@ import { ProductComponent } from './product/product.component';
 import { CustomerComponent } from './customer/customer.component';
 import { Login1Component } from './login1/login1.component';
 import { Signup1Component } from './signup1/signup1.component';
-import{HttpClientModule} from'@angular/common/http'
+import{HttpClientModule} from'@angular/common/http';
+import { LifecycleComponent } from './lifecycle/lifecycle.component'
 // import { ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
@@ -25,7 +26,8 @@ import{HttpClientModule} from'@angular/common/http'
     ProductComponent,
     CustomerComponent,
     Login1Component,
-    Signup1Component
+    Signup1Component,
+    LifecycleComponent
   ],
   imports: [
     BrowserModule,
