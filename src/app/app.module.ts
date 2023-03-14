@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms'
+// import { BrowserModule } from '@angular/platform-browser';
+// import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { ModalDismissReasons, NgbDatepickerModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { MatInputModule } from '@angular/material/input';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +24,9 @@ import { AngularmaterialComponent } from './angularmaterial/angularmaterial.comp
 import {MatButtonModule} from '@angular/material/button';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogComponent } from './dialog/dialog.component';
+import { Dialog1Component } from './dialog1/dialog1.component';
 // import { ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
@@ -35,7 +41,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     Signup1Component,
     LifecycleComponent,
     PipesComponent,
-    AngularmaterialComponent
+    AngularmaterialComponent,
+    DialogComponent,
+    Dialog1Component
   ],
   imports: [
     BrowserModule,
@@ -48,7 +56,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     BrowserAnimationsModule,
     MatButtonModule,
     MatAutocompleteModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatDialogModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
