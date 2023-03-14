@@ -15,7 +15,9 @@ import { Login1Component } from './login1/login1.component';
 import { Signup1Component } from './signup1/signup1.component';
 import{HttpClientModule} from'@angular/common/http';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
-import { PipesComponent } from './pipes/pipes.component'
+import { PipesComponent } from './pipes/pipes.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularmaterialComponent } from './angularmaterial/angularmaterial.component'
 // import { ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
@@ -29,7 +31,8 @@ import { PipesComponent } from './pipes/pipes.component'
     Login1Component,
     Signup1Component,
     LifecycleComponent,
-    PipesComponent
+    PipesComponent,
+    AngularmaterialComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import { PipesComponent } from './pipes/pipes.component'
     ReactiveFormsModule,
     FormsModule,
     NgbDatepickerModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
