@@ -1,11 +1,10 @@
-
+<!-- 
 <div style="height: 100vh;">
-    <div class="w-100 p-3" style="background-color: #eee;height: 10vh">  
+    <div class="w-100 p-" style="background-color: #eee;height: 10vh">  
     <div id="flex-container">
         <h4 class="he">Welcome to E-Shopping</h4>
         <div class="raw-item d" id="raw"><button class="btn btn-primary" routerLink="">Logout</button></div>
         <div class="raw-item" id="raw"><b>{{mail}}</b></div>
-
       </div>
 </div>
 <div class="fl">
@@ -30,4 +29,56 @@
 
 </div>
 
+</div> -->
+
+<div style="height: 100vh;">
+    <!-- <div class="w-100 p-3" style="background-color: #eee;height: 10vh">
+    <div id="flex-container">
+        <h4 class="he">Welcome to E-Shopping</h4>
+        <div class="raw-item d" id="raw"><button class="btn btn-primary" routerLink="">Logout</button></div>
+        <div class="raw-item" id="raw"><b>{{mail}}</b></div>
+      </div>
+</div> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <small class="navbar-brand" href="#">Hidden brand</small>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <small class="nav-link" href="#">Home </small>
+          </li>
+          <li class="nav-item">
+            <small class="nav-link" href="#">Link</small>
+          </li>
+          <li class="nav-item">
+            <small class="nav-link disabled" href="#">Disabled</small>
+          </li>
+        </ul>
+        <input class="form-control"  type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" routerLink="">Logout</button>
+    </div>
+  </nav>
+<div class="fl">
+    <div class="cl col-2">
+        <div class="d-grid btncontainer">
+        <button class="btn btn-primary " routerLink="order">Orders</button>
+        
+        <button class="btn btn-primary "routerLink="products">Product</button>
+        
+        <button class="btn btn-primary "routerLink="customers">Customer</button>
+        
+        <div>
+            <img src="../../assets/logo.jpg" style="width: 80%; border-radius: 60%; margin:auto" >
+        </div>
+        
+    </div>
+</div>
+<div class="router col-10">
+    <router-outlet></router-outlet>
+</div>
+</div>
+<div>
+</div>
 </div>

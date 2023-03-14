@@ -14,8 +14,10 @@
     width: 5rem;
   }
    .cl{
-    width: 40%;
+    /* width: 40%; */
     background-color:beige;
+    /* gap: 10px;
+    display: flex; */
     height: 90vh;
    }
    .fl{
@@ -25,3 +27,8 @@
     text-align: center;
     color: brown;
    }
+   .btncontainer{
+    gap: 20px;
+    padding: 5px;
+   }
+   

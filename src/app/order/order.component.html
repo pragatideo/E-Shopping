@@ -2,12 +2,12 @@
 <ng-template #content let-modal>
 	<div class="modal-header">
 		<h4 class="modal-title" id="modal-basic-title">Create Orders</h4>
-		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+		<button type="button" class="btn-close" aria-label="Close" id="ModalClose" (click)="modal.dismiss('Cross click')"></button>
 	</div>
 	<div class="modal-body">
 		<form [formGroup]="registrationform" (ngSubmit)="onsub()">
 			<div class="mb-3">
-				<label for="dateOfBirth">Enter Product</label>
+				<label for="dateOfBirth">Enter Product*</label>
 				<div class="input-group">
 					<input formControlName="product"
                     type="text"
@@ -17,9 +17,10 @@
 						name="dp"
 					/>
 				</div>
+        <small id ="h1"*ngIf ="(registrationform.controls['product'].errors && registrationform.controls['product'].errors['required']) && value " style="color: red;"> Product is Required</small>
 			</div>
 			<div class="mb-3">
-				<label for="dateOfBirth">Payment Method</label>
+				<label for="dateOfBirth">Payment Method*</label>
 				<div class="input-group">
 					<input formControlName="payment"
                     type="text"
@@ -30,9 +31,10 @@
 					/>
                     
 				</div>
+        <small id ="h1"*ngIf ="(registrationform.controls['payment'].errors && registrationform.controls['payment'].errors['required']) && value " style="color: red;"> Payment is Required</small>
 			</div>
 			<div class="mb-3">
-				<label for="dateOfBirth">Enter Shipping Address</label>
+				<label for="dateOfBirth">Enter Shipping Address*</label>
 				<div class="input-group">
 					<input
                     formControlName="shipping"
@@ -44,15 +46,16 @@
 						
 					/>
 				</div>
+        <small id ="h1"*ngIf ="(registrationform.controls['shipping'].errors && registrationform.controls['shipping'].errors['required']) && value " style="color: red;"> Shipping Address is Required</small>
 			</div>
 		</form>
 	</div>
 	<div class="modal-footer">
-		<button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')" (click)="onfun()">Save</button>
+		<button type="button" class="btn btn-outline-dark"  (click)="onfun()" >Save</button>
 	</div>
 </ng-template>
 
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Add Orders</button>
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)" (click)="onchange()">Add Orders</button>
 
 <hr />
 <!-- <pre>{{ closeResult }}</pre> -->
@@ -82,7 +85,7 @@
   </table> -->
 
 
-  <table class="table" >
+  <table class="table table-striped table-dark" >
     <thead>
       <tr>
         <th scope="col">ID</th>

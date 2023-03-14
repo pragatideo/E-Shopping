@@ -1,0 +1,11 @@
+[{
+    "product":"table",
+    "payment":"cash",
+    "shipping":"Varanasi"
+},
+{
+    "product":"Car",
+    "payment":"cash",
+    "shipping":"Delhi"
+
+}]

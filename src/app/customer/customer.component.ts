@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalDismissReasons, NgbDatepickerModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { FormGroup,FormControl } from '@angular/forms';
+import { FormGroup,FormControl, Validators } from '@angular/forms';
 
 interface orders{
   product:string;
@@ -16,6 +16,7 @@ interface orders{
 export class CustomerComponent {
   closeResult = '';
   ar:orders[]=[]
+  value=false;
 
 	constructor(private modalService: NgbModal) {}
 
@@ -44,9 +45,9 @@ export class CustomerComponent {
     // product:new FormControl(' '),
     // pay:new FormControl(''),
     // shipping:new FormControl('')
-    product:new FormControl(''),
-    payment:new FormControl(''),
-    shipping:new FormControl('')
+    product:new FormControl('',Validators.required),
+    payment:new FormControl('',Validators.required),
+    shipping:new FormControl('',Validators.required)
   });
 
   onfun(){
@@ -55,13 +56,19 @@ export class CustomerComponent {
     //   payment:this.registrationform.controls.payment.value,
     //   shipping:this.registrationform.controls.shipping.value
     // }
+    this.value=true
     let data:orders;
     data={
         product:this.registrationform.controls.product.value,
         payment:this.registrationform.controls.payment.value,
         shipping:this.registrationform.controls.shipping.value
       }
-    this.ar.push(data)
+      if(this.registrationform.valid){
+        this.value=false;
+        this.ar.push(data);
+        document.getElementById("ModalClose")?.click();
+        this.onsub();
+      }
     
   }
 
@@ -69,6 +76,13 @@ export class CustomerComponent {
     console.log(index);
     this.ar.splice(index,1);
     
+  }
+  onsub(){
+    this.registrationform.reset();
+  }
+
+  onchange(){
+    this.value=false;
   }
 
 }

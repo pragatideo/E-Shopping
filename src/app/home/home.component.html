@@ -20,6 +20,10 @@
 <router-outlet></router-outlet> -->
 
 <!-- ------------------------------------------------------------- -->
+
+
+<!-- ---------------forms------------------
+<div *ngIf="login && signup">
 <div class="m new">
   <div class="card f">
 <form>
@@ -38,9 +42,51 @@
   </div>
   <button type="submit" class="btn btn-primary d "  (click)="onsubmit()">Submit</button>
 </form>
+<button (click)="onsubmit1()" class="btn btn-link">Login</button>
+<button (click)="onsub()"class="btn btn-link">SignUp</button>
 </div>
 </div>
-<router-outlet></router-outlet>
-
-
-
+</div>
+<div *ngIf="!login">
+  <form>
+    <app-login1></app-login1>
+  </form>
+</div>
+<div *ngIf="!signup">
+  <form>
+    <app-signup1></app-signup1>
+  </form>
+</div>
+<router-outlet></router-outlet> -->
+<div class="first">
+  <div class="second">
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <form [formGroup]="sign">
+        <div class="form-group">
+          <label><b>Enter Email</b></label>
+          <input type="text" name="name" class="form-control" formControlName="email">
+          <small id="h1"*ngIf="sign.controls['email'].errors && sign.controls['email'].errors['required'] && value"> Email is Required</small>
+          <small id ="h1"*ngIf="(sign.controls['email'].errors && sign.controls['email'].errors['pattern']) "> invalid email</small>
+        </div>
+        <div class="form-group">
+          <label><b>Enter Password</b></label>
+          <input type="password" name="password" class="form-control" formControlName="password1">
+          <!-- <small *ngIf="!sign.value.password1 && formsubmitattemp">password is Required</small> -->
+          <small id ="h1"*ngIf ="(sign.controls['password1'].errors && sign.controls['password1'].errors['required']) && value "> password is Required</small>
+        </div>
+        <br>
+        <div class="d-grid">
+          <input type="submit" value="submit" class="btn btn-primary" (click)="onsubmit()">
+          <small *ngIf="credsInvalid && sign.valid"><small class="k">Creds is not correct</small></small>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<small *ngFor="let p of post1">
+  {{p.email}}
+</small>
