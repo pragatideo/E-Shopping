@@ -5,6 +5,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 // import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { ModalDismissReasons, NgbDatepickerModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { MatInputModule } from '@angular/material/input';
+import {MatMenuModule} from '@angular/material/menu';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +28,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
 import { Dialog1Component } from './dialog1/dialog1.component';
+import { MenuComponent } from './menu/menu.component';
+import { MatIconModule } from '@angular/material/icon';
+import {MatBadgeModule} from '@angular/material/badge';
 // import { ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
@@ -43,7 +47,8 @@ import { Dialog1Component } from './dialog1/dialog1.component';
     PipesComponent,
     AngularmaterialComponent,
     DialogComponent,
-    Dialog1Component
+    Dialog1Component,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +63,10 @@ import { Dialog1Component } from './dialog1/dialog1.component';
     MatAutocompleteModule,
     MatFormFieldModule,
     MatDialogModule,
-    MatInputModule
+    MatInputModule,
+    MatMenuModule,
+    MatIconModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

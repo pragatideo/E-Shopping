@@ -1,0 +1,33 @@
+<div class="c1">
+<div class="cont">
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>dialpad</mat-icon>
+      <span>Redial</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>voicemail</mat-icon>
+      <span>Check voice mail</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>close</mat-icon>
+        <span>Close</span>
+    </button>
+  </mat-menu>
+</div>
+</div>
+<div class="h">
+<app-dialog></app-dialog>
+</div>
+<div class="demo-section">
+    <span>Icon with a badge
+    <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+    </span>
+  </div>

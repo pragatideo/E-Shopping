@@ -1,15 +1,20 @@
-<ol>
-    <li>
+<ul>
+    <!-- <li>
       <mat-form-field appearance="fill">
         <mat-label>What's your name?</mat-label>
         <input matInput [(ngModel)]="name">
       </mat-form-field>
-    </li>
+    </li> -->
     <li>
-      <button mat-raised-button (click)="openDialog()">Pick one</button>
+      <button mat-raised-button (click)="openDialog()">Open Form</button>
     </li>
-    <li *ngIf="animal">
-      You chose: <i>{{animal}}</i>
-    </li>
-  </ol>
+    <br><br>
+    <h1 *ngIf="animal">
+      You choose: <b>{{animal}}</b>
+    </h1>
+
+    <h1 *ngIf="food">
+        You choose: <b>{{food}}</b>
+    </h1>
+  </ul>
   
