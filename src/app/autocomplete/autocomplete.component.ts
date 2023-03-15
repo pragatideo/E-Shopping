@@ -1,7 +1,8 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit,ViewChild } from '@angular/core';
 import {FormControl,FormGroup} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
+import {MatAccordion} from '@angular/material/expansion';
 
 const today = new Date();
 const month = today.getMonth();
@@ -37,5 +38,7 @@ export class AutocompleteComponent implements OnInit {
     start: new FormControl(new Date(year, month, 15)),
     end: new FormControl(new Date(year, month, 19)),
   });
+
+  @ViewChild(MatAccordion) accordion: MatAccordion;
 
 }

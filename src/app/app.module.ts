@@ -34,6 +34,11 @@ import {MatBadgeModule} from '@angular/material/badge';
 import { Alertc1Component } from './alertc1/alertc1.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { ExpansionComponent } from './expansion/expansion.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSelectModule} from '@angular/material/select';
 // import { ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
@@ -53,7 +58,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     Dialog1Component,
     MenuComponent,
     Alertc1Component,
-    AutocompleteComponent
+    AutocompleteComponent,
+    ExpansionComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +79,10 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatMenuModule,
     MatIconModule,
     MatBadgeModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatExpansionModule,
+    MatToolbarModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
